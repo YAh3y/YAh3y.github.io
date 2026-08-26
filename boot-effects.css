@@ -1,0 +1,45 @@
+
+.ps4-boot:before{
+content:"";
+position:fixed;
+inset:0;
+background:white;
+z-index:9999;
+animation:bootFlash 1.5s forwards;
+pointer-events:none;
+}
+
+@keyframes bootFlash{
+0%{opacity:1}
+40%{opacity:.8}
+100%{opacity:0}
+}
+
+
+#out{
+animation:terminalGlow 3s infinite alternate;
+}
+
+
+@keyframes terminalGlow{
+from{
+box-shadow:0 0 30px #008cff55,inset 0 0 30px #000;
+}
+
+to{
+box-shadow:0 0 80px #00e5ff88,inset 0 0 40px #001b33;
+}
+}
+
+
+#state{
+animation:loadingPulse 1.5s infinite;
+}
+
+@keyframes loadingPulse{
+50%{
+text-shadow:
+0 0 30px #00e5ff,
+0 0 60px #008cff;
+}
+}

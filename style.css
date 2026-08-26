@@ -1,0 +1,100 @@
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;900&display=swap');
+
+*{
+ box-sizing:border-box;
+}
+
+body{
+ margin:0;
+ min-height:100vh;
+ background:
+ radial-gradient(circle at top,#12345c 0%,#050914 35%,#02040a 100%);
+ color:#dbeafe;
+ font-family:'JetBrains Mono',monospace;
+}
+
+#brand{
+ padding:18px;
+ text-align:center;
+ background:rgba(3,7,18,.75);
+ border-bottom:1px solid #164e9c;
+ box-shadow:0 0 30px #0077ff30;
+ backdrop-filter:blur(10px);
+}
+
+#brand img{
+ width:42px!important;
+ height:42px!important;
+ border-radius:50%;
+ vertical-align:middle;
+ margin-right:12px;
+}
+
+#brand b{
+ font-size:18px!important;
+ letter-spacing:.18em;
+ color:#60a5fa!important;
+}
+
+#wrap{
+ padding:25px;
+ max-width:1200px;
+ margin:auto;
+}
+
+#state{
+ font-size:28px;
+ font-weight:900;
+ color:#38bdf8;
+ text-shadow:0 0 20px #38bdf8;
+ margin-bottom:20px;
+}
+
+#det,#cache{
+ color:#94a3b8;
+ margin-bottom:12px;
+}
+
+#out{
+ white-space:pre-wrap;
+ font:14px/1.7 'JetBrains Mono',monospace;
+ background:
+ linear-gradient(145deg,#020617,#071426);
+ border:1px solid #1d4ed8;
+ border-radius:18px;
+ padding:25px;
+ height:calc(100vh - 230px);
+ min-height:450px;
+ overflow-y:auto;
+ box-shadow:
+ 0 0 40px rgba(0,119,255,.25),
+ inset 0 0 30px rgba(0,0,0,.5);
+}
+
+#out::before{
+ content:"●  ●  ●   TERMINAL  POOPS";
+ display:block;
+ color:#38bdf8;
+ border-bottom:1px solid #12345c;
+ padding-bottom:15px;
+ margin-bottom:20px;
+}
+
+.ok{color:#22c55e!important;}
+.bad{color:#ef4444!important;}
+.warn{color:#facc15!important;}
+
+button{
+ background:#0f172a;
+ color:#60a5fa;
+ border:1px solid #2563eb;
+ padding:12px 25px;
+ border-radius:12px;
+}
+
+@media(max-width:700px){
+ #wrap{padding:12px}
+ #out{height:70vh}
+ #brand b{font-size:13px!important}
+}

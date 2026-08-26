@@ -1,248 +1,110 @@
 <!DOCTYPE html>
-<html lang="en" manifest="cache.appcache">
+<html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>ps4 poops</title>
+<title>مكتب يحيى للإلكترونيات</title>
+
 <style>
-  html, body { margin:0; padding:0; background:#0b0d10; color:#c8ced8;
-               font:15px/1.45 "Segoe UI", system-ui, sans-serif; }
-  #wrap { padding:16px 18px; }
-  #state { font-size:22px; font-weight:700; margin:0 0 10px; }
-  #out { white-space:pre-wrap; font:12px/1.45 Consolas, monospace;
-         background:#11151b; border:1px solid #1e2732; border-radius:5px;
-         padding:10px 12px; height:calc(100vh - 141px); overflow-y:auto; }
-  .ok { color:#7fd0a0; } .bad { color:#d08a7f; } .warn { color:#d8c07f; }
-  #brand { text-align:center; padding:8px 10px; background:#0e1116;
-           border-bottom:1px solid #1e2732; }
-  #brand img { width:28px; height:28px; margin-right:8px; border-radius:50%;
-               vertical-align:middle; }
-  #brand b { font-size:15px; font-weight:700; letter-spacing:.14em;
-             color:#e6ebf2; vertical-align:middle; }
-  .vip-card{
-
-position:relative;
-
-width:420px;
-
-padding:45px 30px;
-
-margin:60px auto;
-
-text-align:center;
-
-background:
-linear-gradient(
-145deg,
-rgba(255,255,255,.12),
-rgba(0,0,0,.65)
-);
-
-border:1px solid #00e5ff;
-
-border-radius:35px;
-
-box-shadow:
-
-0 0 50px #00aaff55,
-
-inset 0 0 40px #000;
-
-
-backdrop-filter:blur(20px);
-
-transform-style:preserve-3d;
-
-transition:.5s;
-
+*{box-sizing:border-box}
+body{
+margin:0;
+height:100vh;
 overflow:hidden;
-
+background:
+linear-gradient(rgba(0,8,20,.85),rgba(0,0,0,.9)),
+url("gaming-bg.jpg") center/cover;
+color:#fff;
+font-family:Segoe UI,Tahoma,sans-serif;
 }
 
-
-
-.vip-card:hover{
-
-transform:
-
-rotateY(12deg)
-
-rotateX(8deg)
-
-translateY(-10px);
-
+#brand{
+height:90px;
+display:flex;
+align-items:center;
+justify-content:center;
+gap:20px;
+background:rgba(0,0,0,.55);
+border-bottom:1px solid #00e5ff;
+box-shadow:0 0 30px #00aaff55;
 }
 
-
-
-.vip-light{
-
-position:absolute;
-
-width:200px;
-
-height:200px;
-
-background:#00e5ff;
-
-filter:blur(100px);
-
-top:-80px;
-
-left:100px;
-
-opacity:.5;
-
-}
-
-
-
-.badge{
-
-position:absolute;
-
-right:25px;
-
-top:25px;
-
-background:#ffd700;
-
-color:#111;
-
-padding:8px 18px;
-
-border-radius:20px;
-
-font-weight:bold;
-
-box-shadow:
-
-0 0 25px gold;
-
-}
-
-
-
-.logo-box img{
-
-width:150px;
-
-height:150px;
-
+#brand img{
+width:60px;
+height:60px;
 border-radius:50%;
-
-border:4px solid #00e5ff;
-
-box-shadow:
-
-0 0 40px #00e5ff;
-
+border:2px solid #00e5ff;
+box-shadow:0 0 25px #00e5ff;
 }
 
-
-
-.vip-card h1{
-
-font-size:38px;
-
-color:white;
-
-margin:25px 0;
-
-text-shadow:
-
-0 0 20px #00e5ff;
-
+#brand b{
+font-size:28px;
+color:#00e5ff;
+text-shadow:0 0 15px #008cff;
 }
 
-
-
-.line{
-
-height:2px;
-
-background:#00e5ff;
-
-box-shadow:0 0 15px #00e5ff;
-
+#wrap{
+padding:25px;
+height:calc(100vh - 170px);
 }
 
-
-
-.phone{
-
-margin:25px auto;
-
-padding:15px;
-
-width:80%;
-
-background:#001827;
-
-border-radius:20px;
-
+#state{
+font-size:30px;
+font-weight:bold;
 color:#22ff88;
-
-font-size:22px;
-
-box-shadow:
-
-0 0 25px #22ff8855;
-
+text-shadow:0 0 20px #22ff88;
 }
 
+#out{
+height:85%;
+background:rgba(0,0,0,.65);
+border:1px solid #008cff;
+border-radius:20px;
+padding:20px;
+font-family:Consolas,monospace;
+box-shadow:0 0 50px #008cff55,inset 0 0 30px #000;
+overflow:auto;
+}
 
-
-.services{
-
-color:#94a3b8;
-
-letter-spacing:3px;
-
-font-size:13px;
-
+.bottom{
+position:fixed;
+bottom:0;
+left:0;
+right:0;
+height:70px;
+display:flex;
+justify-content:center;
+gap:50px;
+align-items:center;
+background:#020617cc;
+border-top:1px solid #008cff;
+color:#00e5ff;
+font-size:22px;
 }
 </style>
-  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-<div class="vip-card">
 
-    <div class="vip-light"></div>
-
-    <div class="badge">
-        VIP
-    </div>
-
-    <div class="logo-box">
-        <img src="logo.png">
-    </div>
-
-
-    <h1>
-        مكتب يحيى
-        <br>
-        للإلكترونيات
-    </h1>
-
-
-    <div class="line"></div>
-
-
-    <div class="phone">
-        📞 077X XXX XXXX
-    </div>
-
-
-    <div class="services">
-        GAMING • ELECTRONICS • SERVICE
-    </div>
-
-
-</div><div id="wrap">
-  <div id="state">loading poops chain...</div>
-  <div id="out"></div>
+<div id="brand">
+<img src="logo_raw.png">
+<b>مكتب يحيى للإلكترونيات 📞 077X XXX XXXX</b>
 </div>
-<script type="module">import "./chain_poops.js";</script>
+
+<div id="wrap">
+<div id="state">POOPS TERMINAL</div>
+<div id="out"></div>
+</div>
+
+<div class="bottom">
+🎮 ألعاب
+🛠 صيانة
+💻 خدمات
+</div>
+
+<script type="module">
+import "./chain_poops.js";
+</script>
+
 </body>
 </html>

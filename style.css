@@ -1,0 +1,115 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+*{box-sizing:border-box}
+
+body{
+margin:0;
+background:#000814;
+color:#d8f3ff;
+font-family:'Share Tech Mono',monospace;
+overflow-x:hidden;
+}
+
+body:before{
+content:"";
+position:fixed;
+inset:0;
+background:
+linear-gradient(rgba(0,150,255,.05) 1px,transparent 1px),
+linear-gradient(90deg,rgba(0,150,255,.05) 1px,transparent 1px);
+background-size:40px 40px;
+animation:gridMove 10s linear infinite;
+pointer-events:none;
+}
+
+@keyframes gridMove{
+from{transform:translateY(0)}
+to{transform:translateY(40px)}
+}
+
+#brand{
+height:70px;
+display:flex;
+justify-content:center;
+align-items:center;
+gap:15px;
+background:#020617dd;
+border-bottom:1px solid #008cff;
+box-shadow:0 0 35px #008cff55;
+}
+
+#brand img{
+width:45px!important;
+height:45px!important;
+}
+
+#brand b{
+font-size:20px!important;
+color:#00aaff!important;
+letter-spacing:.2em;
+}
+
+#wrap{
+max-width:1200px;
+margin:auto;
+padding:30px;
+}
+
+#state{
+font-size:32px;
+font-weight:bold;
+color:#00e5ff;
+text-shadow:0 0 20px #00e5ff;
+animation:pulse 2s infinite;
+}
+
+@keyframes pulse{
+50%{opacity:.6}
+}
+
+#out{
+margin-top:25px;
+height:65vh;
+background:
+linear-gradient(145deg,#020617,#000);
+border:1px solid #008cff;
+border-radius:20px;
+padding:25px;
+overflow:auto;
+box-shadow:
+0 0 60px #0077ff55,
+inset 0 0 40px #001b33;
+}
+
+#out:before{
+content:"◉ PS4 SECURITY TERMINAL  |  POOPS ENGINE";
+display:block;
+color:#00e5ff;
+padding-bottom:20px;
+border-bottom:1px solid #123;
+margin-bottom:20px;
+}
+
+.ok{
+color:#00ff88!important;
+text-shadow:0 0 10px #00ff88;
+}
+
+.warn{
+color:#ffd000!important;
+}
+
+.bad{
+color:#ff3355!important;
+}
+
+#cache{
+color:#7dd3fc;
+}
+
+@media(max-width:700px){
+#wrap{padding:15px}
+#state{font-size:22px}
+#out{height:70vh}
+}

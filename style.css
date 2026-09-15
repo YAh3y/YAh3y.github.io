@@ -1,5 +1,5 @@
 html {
-    background-image: url('img.jpg');
+    background-image: url('img.png');
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
@@ -82,10 +82,308 @@ a {
     background-color: #d42a01;
 }
 
-.btn-multi {
-    background-color: #b8860b;
+.btn-ps5 {
+    background-color: #3d3f4e;
 }
 
-.btn-multi:hover {
-    background-color: #daa520;
+.btn-ps5:hover {
+    background-color: #c2c2c2;
+    color: #303030;
+}
+/* ===== مكتب يحيى للإلكترونيات ===== */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    min-height: 100%;
+    background:
+        linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.75)),
+        url('img.png') center center / cover fixed no-repeat;
+    background-color: #080808;
+}
+
+body {
+    margin: 0;
+    padding: 25px;
+    min-height: 100vh;
+    color: white;
+    text-align: center;
+    font-family: Arial, Tahoma, sans-serif;
+    overflow-x: hidden;
+}
+
+/* العنوان الرئيسي */
+
+h1 {
+    color: #ffffff;
+    font-size: 30px;
+    text-shadow:
+        0 0 5px #ff0000,
+        0 0 15px #8b0000,
+        3px 3px 5px #000;
+    letter-spacing: 1px;
+    margin: 10px auto 15px;
+}
+
+/* الخط الأحمر */
+
+hr {
+    border: none;
+    height: 2px;
+    width: 80%;
+    max-width: 1000px;
+    background: linear-gradient(
+        to right,
+        transparent,
+        #ff0000,
+        #ff5a00,
+        #ff0000,
+        transparent
+    );
+    box-shadow: 0 0 12px red;
+}
+
+/* عنوان اختيار الفيرموير */
+
+#menu h1 {
+    display: inline-block;
+    padding: 10px 25px;
+    color: #ffd000 !important;
+    background: rgba(0,0,0,0.70);
+    border: 1px solid #ff3300;
+    border-radius: 12px;
+    box-shadow:
+        0 0 10px #ff0000,
+        inset 0 0 15px rgba(255,0,0,0.2);
+}
+
+/* الأزرار */
+
+.btn {
+    position: relative;
+
+    width: 230px;
+    min-height: 52px;
+
+    margin: 7px 5px;
+    padding: 10px 12px;
+
+    color: white;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(30,30,35,0.95),
+            rgba(5,5,8,0.95)
+        );
+
+    border: 1px solid #b50000;
+    border-radius: 10px;
+
+    box-shadow:
+        0 0 5px #800000,
+        inset 0 0 10px rgba(255,0,0,0.12);
+
+    cursor: pointer;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+
+    overflow: hidden;
+}
+
+/* اللمعة داخل الزر */
+
+.btn::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -100%;
+
+    width: 70%;
+    height: 100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,255,255,0.18),
+            transparent
+        );
+
+    transition: 0.5s;
+}
+
+/* عند الوقوف على الزر */
+
+.btn:hover {
+    transform: translateY(-4px) scale(1.04);
+
+    background:
+        linear-gradient(
+            145deg,
+            #7a0000,
+            #210000
+        );
+
+    border-color: #ff3b00;
+
+    box-shadow:
+        0 0 8px #ff0000,
+        0 0 20px #ff0000,
+        0 0 35px rgba(255,0,0,0.5);
+}
+
+.btn:hover::before {
+    left: 130%;
+}
+
+/* عند الضغط */
+
+.btn:active {
+    transform: scale(0.96);
+}
+
+/* أزرار خاصة */
+
+.btn-onln {
+    background:
+        linear-gradient(
+            145deg,
+            #006b2e,
+            #002b12
+        );
+
+    border-color: #00d95a;
+}
+
+.btn-onln:hover {
+    background:
+        linear-gradient(
+            145deg,
+            #009941,
+            #003b1a
+        );
+
+    box-shadow:
+        0 0 20px #00ff66;
+}
+
+/* Toolbox */
+
+.btn-toolbox {
+    background:
+        linear-gradient(
+            145deg,
+            #8f2200,
+            #350800
+        );
+
+    border-color: #ff4a00;
+}
+
+.btn-toolbox:hover {
+    box-shadow:
+        0 0 25px #ff4a00;
+}
+
+/* PS5 */
+
+.btn-ps5 {
+    background:
+        linear-gradient(
+            145deg,
+            #17202f,
+            #05070c
+        );
+
+    border-color: #268cff;
+}
+
+.btn-ps5:hover {
+    color: white;
+
+    background:
+        linear-gradient(
+            145deg,
+            #004c9c,
+            #001b3d
+        );
+
+    box-shadow:
+        0 0 25px #0088ff;
+}
+
+/* إخفاء الأقسام غير المستخدمة */
+
+#progress {
+    display: block;
+}
+
+#menu {
+    display: block;
+    animation: fadeIn 0.8s ease;
+}
+
+#crypto,
+#tools,
+#lnx,
+#mods {
+    display: none;
+}
+
+/* حركة ظهور */
+
+@keyframes fadeIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+/* للموبايل */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 12px 5px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    #menu h1 {
+        font-size: 16px !important;
+        padding: 8px 12px;
+    }
+
+    .btn {
+        width: 92%;
+        max-width: 340px;
+        min-height: 50px;
+        font-size: 16px;
+        margin: 5px auto;
+    }
+
+    hr {
+        width: 95%;
+    }
+
 }
